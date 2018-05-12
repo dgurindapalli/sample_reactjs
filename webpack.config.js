@@ -10,18 +10,18 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        rules:[
+        rules: [
             {
-            test: /\.(js)$/,
-            exclude: /node_modules/,
-            use:['babel-loader']
+                test: /\.(js)$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
             },
             {
-              test: /\.css$/,
-              use: ETP.extract({
-                  fallback: 'style-loader',
-                  use: ['css-loader']
-              })
+                test: /\.css$/,
+                use: ETP.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader']
+                })
             }
         ]
     },
